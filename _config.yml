@@ -69,12 +69,12 @@ links:
   - android:
       name: Android
       show: true
-      href: mailto:jonathan.doe@host.domain
+      href: 
       icon: fas fa-android
   - apple:
       name: IOS
       show: true
-      href: https://pastebin.com/raw/YOUR_PUBLIC_KEY
+      href: 
       icon: fas fa-apple
 
 
