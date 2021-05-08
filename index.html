@@ -54,7 +54,7 @@ permalink: /
 </div>
 <div class="row">
     <div class="col">
-        <h1 class="text-center font-weight-bold">{{ site.name }}</h1>
+        <h1 class="text-center font-weight-bold" id = "title">{{ site.name }}</h1>
         {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
     </div>
 </div>
@@ -93,10 +93,12 @@ permalink: /
     function GetName(){
         var params = getUrlParams();
         console.log(params.name);
+
+        var title = document.getElementById("title");
+        title.innerText = params.name + " 선생님 감사합니다";
+
         return params.name;
     }
-
-    GetName();
 </script>
 
 </html>
