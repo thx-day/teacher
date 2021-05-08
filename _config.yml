@@ -69,12 +69,12 @@ links:
   - android:
       name: Android
       show: true
-      href: 
+      href: Android()
       icon: fab fa-android
   - apple:
       name: IOS
       show: true
-      href: 
+      href: IOS()
       icon: fab fa-apple
 
 
