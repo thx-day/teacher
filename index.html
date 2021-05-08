@@ -53,7 +53,7 @@ permalink: /
 </div>
 <div class="row">
     <div class="col">
-        <h1 class="text-center font-weight-bold">{{ site.name }}</h1>
+        <h1 class="text-center font-weight-bold" id = "title"></h1>
         {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
     </div>
 </div>
@@ -81,4 +81,21 @@ permalink: /
 </div></div></footer>
 
 </body>
+
+<script>
+    function getUrlParams() {
+        var params = {};
+        window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+        return params;
+    }
+
+    function GetName(){
+        var params = getUrlParams();
+        console.log(params.name);
+        return params.name;
+    }
+
+    GetName();
+</script>
+
 </html>
