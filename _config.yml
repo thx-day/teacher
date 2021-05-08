@@ -12,7 +12,7 @@ sass:
 # When modifying this file, take care to preserve the indentation. This is YAML ...
 
 # Main Headline, name required, subtitle optional
-name: <%= request.getParameter("name") %> 선생님 감사합니다
+name:  선생님 감사합니다
 #subtitle:
 subtitle: "2021.05.15"
 
