@@ -94,11 +94,15 @@ permalink: /
         var params = getUrlParams();
         console.log(params.name);
 
-        var title = document.getElementById("title");
-        title.innerText = params.name + " 선생님 감사합니다";
-
         return params.name;
     }
+
+    function InitTitle(){
+        var title = document.getElementById("title");
+        title.innerText = GetName() + " 선생님 감사합니다";
+    }
+
+    InitTitle();
 </script>
 
 </html>
