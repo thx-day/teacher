@@ -39,6 +39,7 @@ permalink: /
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" type="text/css"
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"> 
+
 </head>
 <body class="fullscreen-background">
 
@@ -46,14 +47,14 @@ permalink: /
 <div class="container fuse-core-content pb-4">
 
 <div class="row pt-sm-4">
-    <img id="avatar" class="my-3 my-sm-4" alt="{{ site.name }}"
+    <div class="col text-center"><img id="avatar" class="my-3 my-sm-4" alt="{{ site.name }}"
         src="{% if site.avatar %}{% if site.avatar contains '://' %}{{ site.avatar }}{%
         else %}{{ site.baseurl }}/{{ site.avatar }}{% endif %}{%
-        else %}{{ site.baseurl }}/images/avatar.svg{% endif %}">
+        else %}{{ site.baseurl }}/images/avatar.svg{% endif %}"></div>
 </div>
 <div class="row">
     <div class="col">
-        <h1 class="text-center font-weight-bold" id = "title"></h1>
+        <h1 class="text-center font-weight-bold">{{ site.name }}</h1>
         {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
     </div>
 </div>
