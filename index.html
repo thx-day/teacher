@@ -92,9 +92,20 @@ permalink: /
 
     function GetName(){
         var params = getUrlParams();
-        console.log(params.name);
-
-        return params.name;
+        var n_table = [
+            "오리온",
+            "김수연",
+            "최영란",
+            "박은빈",
+            "김지수",
+            "유현숙",
+            "양승제",
+            "양선희",
+            "조미영",
+            "고지영"
+        ]
+        
+        return n_table[params.code];
     }
 
     function InitTitle(){
