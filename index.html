@@ -43,45 +43,47 @@ permalink: /
 </head>
 <body class="fullscreen-background">
 
-<div class="glass-pane">
-<div class="container fuse-core-content pb-4">
-
-<div class="row pt-sm-4">
-    <div class="col text-center"><img id="avatar" class="my-3 my-sm-4" alt="{{ site.name }}"
-        src="{% if site.avatar %}{% if site.avatar contains '://' %}{{ site.avatar }}{%
-        else %}{{ site.baseurl }}/{{ site.avatar }}{% endif %}{%
-        else %}{{ site.baseurl }}/images/avatar.svg{% endif %}"></div>
-</div>
-<div class="row">
-    <div class="col">
-        <h1 class="text-center font-weight-bold" id = "title">{{ site.name }}</h1>
-        {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
+    <div class="glass-pane">
+    <div class="container fuse-core-content pb-4">
+    
+    <div class="row pt-sm-4">
+        <div class="col text-center"><img id="avatar" class="my-3 my-sm-4" alt="{{ site.name }}"
+            src="{% if site.avatar %}{% if site.avatar contains '://' %}{{ site.avatar }}{%
+            else %}{{ site.baseurl }}/{{ site.avatar }}{% endif %}{%
+            else %}{{ site.baseurl }}/images/avatar.svg{% endif %}"></div>
     </div>
-</div>
-
-<div class="row justify-content-center links pt-1 pt-sm-2">
-{% for hash in site.links %}{% for linkInfo in hash %}{% if linkInfo[1].show %}
-    <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"><a
-        href="{{ linkInfo[1].href }}"{% if site.ga %}
-        onclick="trackOutboundLink('{{ linkInfo[1].name }}', '{{ linkInfo[1].href }}'); return false;"
-        {% endif %}><i class="{{ linkInfo[1].icon }} fa-fw"></i>
-        <span class="d-inline d-sm-none">{{ linkInfo[1].name }}</span></a></div>
-{% endif %}{% endfor %}{% endfor %}
-</div>
-
-{% if site.extra_html %}
-<div class="row justify-content-center">
-    <div class="col mt-3 text-sm-center fuse-core-extra">{{ site.extra_html }}</div>
-</div>
-{% endif %}
-
-</div>
-</div>
-
-<footer><div class="container"><div class="row">
-</div></div></footer>
-
-</body>
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center font-weight-bold">{{ site.name }}</h1>
+            {% if site.subtitle %}<h3 class="text-center font-weight-light">{{ site.subtitle }}</h3>{% endif %}
+        </div>
+    </div>
+    
+    <div class="row justify-content-center links pt-1 pt-sm-2">
+    {% for hash in site.links %}{% for linkInfo in hash %}{% if linkInfo[1].show %}
+        <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"><a
+            href="{{ linkInfo[1].href }}"{% if site.ga %}
+            onclick="trackOutboundLink('{{ linkInfo[1].name }}', '{{ linkInfo[1].href }}'); return false;"
+            {% endif %}><i class="{{ linkInfo[1].icon }} fa-fw"></i>
+            <span class="d-inline d-sm-none">{{ linkInfo[1].name }}</span></a></div>
+    {% endif %}{% endfor %}{% endfor %}
+    </div>
+    
+    {% if site.extra_html %}
+    <div class="row justify-content-center">
+        <div class="col mt-3 text-sm-center fuse-core-extra">{{ site.extra_html }}</div>
+    </div>
+    {% endif %}
+    
+    </div>
+    </div>
+    
+    <footer><div class="container"><div class="row">
+        <div class="col text-center">Built on the <a href="https://github.com/tsjensen/fuse-core">Fuse Core</a>
+        Jekyll theme.</div>
+    </div></div></footer>
+    
+    </body>
 
 <script>
     function getUrlParams() {
