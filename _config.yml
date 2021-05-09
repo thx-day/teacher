@@ -81,6 +81,7 @@ links:
 # Extra HTML which will be displayed below the links. Keep it short. Leave empty to disable.
 #extra_html:
 extra_html: >
-    Download Kakotalk Theme
+    Download Kakotalk Theme \n
+    Made By. 유태우
 
 #EOF
