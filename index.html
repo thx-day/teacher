@@ -84,7 +84,7 @@ permalink: /
 {% for hash in site.links %}{% for linkInfo in hash %}{% if linkInfo[1].show %}
     <div class="col-xs-12 col-sm-2 col-lg-1 px-3 px-sm-0 mt-2 mt-sm-3 text-sm-center"><a
         href="{{ linkInfo[1].href }}"{% if site.ga %}
-        onclick="return false;"
+        onclick="trackOutboundLink('{{ linkInfo[1].name }}', '{{ linkInfo[1].href }}'); return false;"
         {% endif %}><i class="{{ linkInfo[1].icon }} fa-fw"></i>
         <span class="d-inline d-sm-none">{{ linkInfo[1].name }}</span></a></div>
 {% endif %}{% endfor %}{% endfor %}
@@ -129,11 +129,6 @@ permalink: /
         ]
         
         return n_table[params.code];
-    }
-
-    function InitTitle(){
-        var title = document.getElementById("title");
-        title.innerText = GetName() + " 선생님 감사합니다";
     }
 
     function download(filename, text) {
