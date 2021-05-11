@@ -136,12 +136,27 @@ permalink: /
         title.innerText = GetName() + " 선생님 감사합니다";
     }
 
+    function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+    }
+
     function Android(){
-        return "theme/" + GetName() + " 선생님 테마.apk";
+        download("theme/" + GetName() + " 선생님 테마.apk", "download");
+        console.log("android");
     }
 
     function IOS(){
-        return "theme/" + GetName() + " 선생님 감사합니다.ktheme";
+        download("theme/" + GetName() + " 선생님 감사합니다.ktheme", "download");
+        console.log("ios");
     }
 
     InitTitle();
