@@ -109,6 +109,11 @@ permalink: /
         return n_table[params.code];
     }
 
+    function InitTitle(){
+        var title = document.getElementById("title");
+        title.innerText = GetName() + " 선생님 감사합니다";
+    }
+
     function download(fileUrl) {
         var a = document.createElement("a");
         a.href = fileUrl;
